@@ -50,27 +50,11 @@ internal class Program
 
         };
 
+        //int count = 0;
+        //int? maxDepth = 0;
+        //var dir = CreateRandomDirectory(-1, ref count, ref maxDepth);
 
-        ;
-
-        int count = 0;
-        int? maxDepth = 0;
-        var dir = CreateRandomDirectory(-1, ref count, ref maxDepth);
-
-        WriteDirectoryTree(root, 0, 100, "├");
-
-        /*Console.WriteLine("max depth : " + (maxDepth+1));
-        int number;
-        do
-        {
-            Console.Write("max depth : ");
-            string? input = Console.ReadLine();
-            int.TryParse(input, out number);
-
-            WriteDirectoryTree(dir, 0, number);
-
-        } while (number != 0);*/
-
+        WriteDirectoryTree(root, 0, 4);
     }
 
 
@@ -90,45 +74,41 @@ internal class Program
             return dir;
         }
 
-        var random = new Random();
-        var ch = random.Next(0, 5);
-
         for (int j = 0; j < 3; j++)
         {
-            if (count > 50) break;
-            var r = CreateRandomDirectory(dir.Id, ref count, ref maxDepth, depth++);
+            var r = CreateRandomDirectory(dir.Id, ref count, ref maxDepth);
             dir.Childrens.Add(r);
         }
-        depth++;
         return dir;
     }
-    public static void WriteDirectoryTree(Directory dir, int depth, int lastDepth,string linkChar, string prefix = "")
+    public static void WriteDirectoryTree(Directory dir, int depth, int maxDepth,string linkChar = "├", string prefix = "")
     {
         var depthPlus = 4;
-        //Console.WriteLine($"prefix : {prefix}");
         string text = $"{dir.Name} c:{dir.Childrens.Count}";
-        //└
+
         if (depth > 0)
-            text = prefix.Substring(0, prefix.Length - depthPlus) + linkChar + "".PadRight(depthPlus-1, '─') + text;
+            text = prefix.Substring(0, prefix.Length - depthPlus) + 
+                   linkChar + 
+                   "".PadRight(depthPlus-1, '─') + text;
 
         Console.WriteLine(text);
 
         for (int i = 0; i < dir.Childrens.Count; i++)
         {
-            var t = "";
+            var pref = "";
             var linkCh = "";
             if (i != dir.Childrens.Count - 1)
             {
-                t = prefix + "│".PadRight(depthPlus,' ');
+                pref = prefix + "│".PadRight(depthPlus,' ');
                 linkCh = "├";
             }
             else {
-                t = prefix + "".PadRight(depthPlus, ' ');
+                pref = prefix + "".PadRight(depthPlus, ' ');
                 linkCh = "└";
             }
 
-            if (depth + depthPlus <= lastDepth * depthPlus)
-                WriteDirectoryTree(dir.Childrens[i], depth + depthPlus, lastDepth,linkCh, t);
+            if (depth + depthPlus <= maxDepth * depthPlus)
+                WriteDirectoryTree(dir.Childrens[i], depth + depthPlus, maxDepth,linkCh, pref);
         }
 
     }
@@ -141,9 +121,6 @@ public class Directory
     public int? ParentId { get; set; }
 
     public string Name { get; set; } = string.Empty;
-
-    public int Node { get; set; }
-
     public List<Directory> Childrens { get; set; } = new List<Directory>();
 
 }
