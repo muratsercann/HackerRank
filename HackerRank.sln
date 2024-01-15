@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileAndDirectoryTree", "Fil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM_ICPC_Team", "ACM_ICPC_Team\ACM_ICPC_Team.csproj", "{BE21FFCC-5070-4F7C-816B-587C3CEFE254}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaumAndBday", "TaumAndBday\TaumAndBday.csproj", "{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{BE21FFCC-5070-4F7C-816B-587C3CEFE254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE21FFCC-5070-4F7C-816B-587C3CEFE254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE21FFCC-5070-4F7C-816B-587C3CEFE254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
