@@ -15,9 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuickSortAlgorithm", "Quick
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileAndDirectoryTree", "FileAndDirectoryTree\FileAndDirectoryTree.csproj", "{A24A6BFA-709C-4FC5-98DD-58AD0836DD9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM_ICPC_Team", "ACM_ICPC_Team\ACM_ICPC_Team.csproj", "{BE21FFCC-5070-4F7C-816B-587C3CEFE254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ACM_ICPC_Team", "ACM_ICPC_Team\ACM_ICPC_Team.csproj", "{BE21FFCC-5070-4F7C-816B-587C3CEFE254}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaumAndBday", "TaumAndBday\TaumAndBday.csproj", "{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaumAndBday", "TaumAndBday\TaumAndBday.csproj", "{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrganizingContainersOfBalls", "OrganizingContainersOfBalls\OrganizingContainersOfBalls.csproj", "{AF0882C4-6213-4DFF-B314-3DFFA75B173F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{1C895474-8E7E-4FC7-9456-353AC934A310}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D9AEBB4-6B14-4C96-8439-0DFBDFF26D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF0882C4-6213-4DFF-B314-3DFFA75B173F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF0882C4-6213-4DFF-B314-3DFFA75B173F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF0882C4-6213-4DFF-B314-3DFFA75B173F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF0882C4-6213-4DFF-B314-3DFFA75B173F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C895474-8E7E-4FC7-9456-353AC934A310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C895474-8E7E-4FC7-9456-353AC934A310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C895474-8E7E-4FC7-9456-353AC934A310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C895474-8E7E-4FC7-9456-353AC934A310}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
