@@ -34,23 +34,27 @@ internal class Program
     /// This function checks : Can each color be collected in separate containers
     /// For example : Color : 0 in Container 2, Color 1 in Container 0, Color : 2 in Container 1
     /// </summary>
-    /// <param name="distinctList"></param>
+    /// <param name="distinctColors">This represents the distinct color list</param>
     /// <param name="containerIndex"></param>
-    /// <param name="containers"></param>
+    /// <param name="containers">
+    ///     For example      : container = {{1},{0,1}}
+    ///     containers[1]    : [0,1];  
+    ///     => ALL COLOR "0" AND ALL COLOR "1" CAN BE COLLECTED IN CONTAINER "1"
+    /// </param>
     /// <returns></returns>
-    public static bool isColorsInSeparateContainer(List<int> distinctList, int containerIndex, List<List<int>> containers)
+    public static bool isColorsInSeparateContainer(List<int> distinctColors, int containerIndex, List<List<int>> containers)
     {
         for (int i = 0; i < containers[containerIndex].Count; i++)
         {
-            if (!distinctList.Any(x => x == containers[containerIndex][i]))
+            if (!distinctColors.Any(x => x == containers[containerIndex][i]))
             {
-                distinctList.Add(containers[containerIndex][i]);
+                distinctColors.Add(containers[containerIndex][i]);
 
                 if (containerIndex + 1 < containers.Count)
                 {
-                    isColorsInSeparateContainer(distinctList, containerIndex + 1, containers);
+                    isColorsInSeparateContainer(distinctColors, containerIndex + 1, containers);
 
-                    if (distinctList.Count == containers.Count)
+                    if (distinctColors.Count == containers.Count)
                     {   //This means Each color in separate containers.
                         return true;
                     }
@@ -58,12 +62,12 @@ internal class Program
             }
         }
 
-        if (distinctList.Count > 0 && distinctList.Count != containers.Count)
+        if (distinctColors.Count > 0 && distinctColors.Count != containers.Count)
         {
-            distinctList.RemoveAt(distinctList.Count - 1);
+            distinctColors.RemoveAt(distinctColors.Count - 1);
         }
 
-        if (distinctList.Count == containers.Count)
+        if (distinctColors.Count == containers.Count)
         {
             return true;
         }
